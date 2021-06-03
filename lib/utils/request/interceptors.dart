@@ -1,18 +1,18 @@
 part of request;
 
-class CustomInterceptors extends InterceptorsWrapper {
+class CustomInterceptors extends Interceptor {
   @override
-  Future onRequest(RequestOptions options) {
-    // print("REQUEST[${options?.method}] => PATH: ${options?.path}");
-    return super.onRequest(options);
+  void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
+    print('REQUEST[${options.method}] => PATH: ${options.path}');
+    return super.onRequest(options, handler);
   }
-  @override
-  Future? onResponse(Response response) {
+  Future? onResponse(Response response, ResponseInterceptorHandler handler) {
     try{
       Map<String, dynamic> responseData = jsonDecode(response.data.toString()) as Map<String, dynamic>;
       if (response.statusCode == 200) {
         if (responseData['code'] == 1000) {
-          return super.onResponse(response);
+          super.onResponse(response, handler);
+          return null;
         } 
         else if (responseData['code'] == 1002) {
           Utils.navigatorKey.currentState!.pushNamedAndRemoveUntil('/login', (route) => route == null);
@@ -26,11 +26,11 @@ class CustomInterceptors extends InterceptorsWrapper {
     } catch(error) {
       throw(error);
     }
-    // print("RESPONSE[${response?.statusCode}] => PATH: ${response?.request?.path}");
   }
   @override
-  Future onError(DioError err) {
-    // print("ERROR[${err?.response?.statusCode}] => PATH: ${err?.request?.path}");
-    return super.onError(err);
+  Future? onError(DioError err, ErrorInterceptorHandler handler) {
+    // print('ERROR[${err.response?.statusCode}] => PATH: ${err.request.path}');
+    super.onError(err, handler);
+    return null;
   }
 }

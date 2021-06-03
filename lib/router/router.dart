@@ -18,7 +18,7 @@ class MyRouter {
     '/detail': (params) => DetailPage(params: {},),
     '/tools': (params) => ToolsPage(params: {},),
     '/provider': (params) => ProviderDemoPage(params: {},),
-    '/login': (params) => LoginPage()
+    '/login': (params) => LoginPage(params: {},)
 
   };
 

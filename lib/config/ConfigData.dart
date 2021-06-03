@@ -10,9 +10,9 @@ class ConfigData {
 
 
   // 设计图的宽度用于初始化flutter_screenutil包
-  static const int width = 750;
+  static const double width = 750;
 
   // 设计图的高度用于初始化flutter_screenutil包
-  static const int height = 1335;
+  static const double height = 1335;
 
 }

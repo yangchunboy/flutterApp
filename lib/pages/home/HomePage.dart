@@ -20,32 +20,31 @@ class _HomePageState extends State<HomePage>{
   @override
   Widget build(BuildContext context) {
     //设置字体大小根据系统的“字体大小”辅助选项来进行缩放,默认为false
-    ScreenUtil.init(context, width: ConfigData.width, height: ConfigData.width, allowFontScaling: true);
     return Scaffold(
       appBar: AppBar(
         title: Text('text'),
       ),
       body: Column(
         children: <Widget>[
-          FlatButton(
+          TextButton(
             onPressed: () {
               Navigator.pushNamed(context, '/product', arguments: { 'productId': '1111' });
             },
             child: Text('点击我跳转商品页面并携带参数'),
           ),
-          FlatButton(
+          TextButton(
             onPressed: () {
               Navigator.pushNamed(context, '/detail');
             },
             child: Text('点击我提起去请求数据和展示的demo页面'),
           ),
-          FlatButton(
+          TextButton(
             onPressed: () {
               Navigator.pushNamed(context, '/tools');
             },
             child: Text('点击跳转工具页面'),
           ),
-          FlatButton(
+          TextButton(
             onPressed: () {
               Navigator.pushNamed(context, '/provider');
             },
