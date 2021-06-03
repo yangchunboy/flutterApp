@@ -8,34 +8,19 @@ import 'package:app/pages/login/loginPage.dart';
 
 
 class MyRouter {
-  static Map routes = {
-    '/': (params) => HomePage(),
-    '/product': (params){ 
-      // print(params);
-      String productId = params['productId'];
-      return ProductPage(productId: productId); 
-    },
-    '/detail': (params) => DetailPage(params: {},),
-    '/tools': (params) => ToolsPage(params: {},),
-    '/provider': (params) => ProviderDemoPage(params: {},),
-    '/login': (params) => LoginPage(params: {},)
 
-  };
 
-  static onGenerateRoute(RouteSettings settings) {
-          // If you push the PassArguments route
-    if (routes[settings.name] != null) {
-      // Cast the arguments to the correct type: ScreenArguments.
-      final params = settings.arguments as Map<String, dynamic>;
-      // print(params);
-
-      // Then, extract the required data from the arguments and
-      // pass the data to the correct screen.
-      return MaterialPageRoute(
-        builder: (context) {
-          return routes[settings.name](params);
-        },
-      );
-    }
+  static Map<String, WidgetBuilder> myRoutes(BuildContext context) {
+    return {
+      '/': (context) => HomePage(),
+      '/product': (context){ 
+        return ProductPage(productId: '1'); 
+      },
+      '/detail': (context) => DetailPage(params: {},),
+      '/tools': (context) => ToolsPage(params: {},),
+      '/provider': (context) => ProviderDemoPage(params: {},),
+      '/login': (context) => LoginPage(params: {},)
+    };
   }
+
 }
