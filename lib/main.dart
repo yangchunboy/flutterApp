@@ -4,13 +4,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:app/App.dart';
-import 'package:provider/provider.dart'; 
-import 'package:app/provider/CountModel.dart';
 
-void main() => runApp(
-  ChangeNotifierProvider(
-    create: (context) =>  CountModel(),
-    child: App(),
-  )
-);
+void main() => runApp(App());
 

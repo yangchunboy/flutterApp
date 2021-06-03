@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:app/pages/home/HomePage.dart';
 import 'package:app/pages/product/ProductPage.dart';
 import 'package:app/pages/detail/DetailPage.dart';
-import 'package:app/pages/providerDemo/ProviderDemo.dart';
 import 'package:app/pages/login/loginPage.dart';
 
 
@@ -18,7 +17,6 @@ class MyRouter {
       },
       '/detail': (context) => DetailPage(params: {},),
       '/tools': (context) => ToolsPage(params: {},),
-      '/provider': (context) => ProviderDemoPage(params: {},),
       '/login': (context) => LoginPage(params: {},)
     };
   }
