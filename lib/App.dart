@@ -4,6 +4,7 @@ import 'package:app/router/router.dart';
 import 'package:app/theme/ThemeStyle.dart';
 // import 'package:app/utils/utils.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 import 'config/ConfigData.dart';
 
@@ -18,9 +19,10 @@ class App extends StatelessWidget {
     return ScreenUtilInit(
       designSize: Size(ConfigData.width, ConfigData.height),
       builder: () => 
-        MaterialApp(
+        GetMaterialApp(
           initialRoute: '/',
-          routes: MyRouter.myRoutes(context),
+          getPages: MyRouter.routes,
+          // routes: MyRouter.myRoutes(context),
           darkTheme: ThemeStyle.dark(),
           navigatorKey: Utils.navigatorKey,
         )

@@ -2,6 +2,7 @@ import 'package:app/config/ConfigData.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class HomePage extends  StatefulWidget{
 
@@ -28,7 +29,11 @@ class _HomePageState extends State<HomePage>{
         children: <Widget>[
           TextButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/product', arguments: { 'productId': '1111' });
+              // Navigator.pushNamed(context, '/product', arguments: { 'productId': '1111' });
+              Map<String, String> params = {
+                'productId': 'qwertyuiop'
+              };
+              Get.toNamed('/product', arguments: params);
             },
             child: Text('点击我跳转商品页面并携带参数'),
           ),
