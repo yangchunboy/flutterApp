@@ -44,6 +44,12 @@ class _HomePageState extends State<HomePage>{
             },
             child: Text('点击跳转工具页面'),
           ),
+          TextButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/getx');
+            },
+            child: Text('点击跳转getX的例子'),
+          ),
         ],
       )
     );
