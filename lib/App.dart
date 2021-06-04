@@ -1,15 +1,11 @@
-import 'package:app/utils/utils.dart';
 import 'package:flutter/material.dart';
-import 'package:app/router/router.dart';
-import 'package:app/theme/ThemeStyle.dart';
-// import 'package:app/utils/utils.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:app/router/router.dart';
+import 'package:app/theme/ThemeStyle.dart';
+import 'package:app/utils/utils.dart';
 
 import 'config/ConfigData.dart';
-
-
-// final GlobalKey<NavigatorState> navigatorKey = new GlobalKey<NavigatorState>();
 
 
 
@@ -22,7 +18,6 @@ class App extends StatelessWidget {
         GetMaterialApp(
           initialRoute: '/',
           getPages: MyRouter.routes,
-          // routes: MyRouter.myRoutes(context),
           darkTheme: ThemeStyle.dark(),
           navigatorKey: Utils.navigatorKey,
         )

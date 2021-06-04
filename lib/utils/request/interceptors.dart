@@ -15,7 +15,8 @@ class CustomInterceptors extends Interceptor {
           return null;
         } 
         else if (responseData['code'] == 1002) {
-          Utils.navigatorKey.currentState!.pushNamedAndRemoveUntil('/login', (route) => route == null);
+          // Utils.navigatorKey.currentState!.pushNamedAndRemoveUntil('/login', (route) => route == null);
+          getX.Get.offAllNamed('/login');
         }
         else {
           Utils.showToast(responseData['message'] as String);

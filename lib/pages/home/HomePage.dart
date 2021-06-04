@@ -39,19 +39,22 @@ class _HomePageState extends State<HomePage>{
           ),
           TextButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/detail');
+              // Navigator.pushNamed(context, '/detail');
+              Get.toNamed('/detail');
             },
             child: Text('点击我提起去请求数据和展示的demo页面'),
           ),
           TextButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/tools');
+              // Navigator.pushNamed(context, '/tools');
+              Get.toNamed('/tools');
             },
             child: Text('点击跳转工具页面'),
           ),
           TextButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/getx');
+              // Navigator.pushNamed(context, '/getx');
+              Get.toNamed('/getx');
             },
             child: Text('点击跳转getX的例子'),
           ),

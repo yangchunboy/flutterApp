@@ -10,20 +10,6 @@ import 'package:get/get.dart';
 
 class MyRouter {
 
-
-  static Map<String, WidgetBuilder> myRoutes(BuildContext context) {
-    return {
-      '/': (context) => HomePage(),
-      '/product': (context){ 
-        return ProductPage(productId: '1'); 
-      },
-      '/detail': (context) => DetailPage(params: {},),
-      '/tools': (context) => ToolsPage(params: {},),
-      '/login': (context) => LoginPage(params: {},),
-      '/getx': (context) => CounterPage()
-    };
-  }
-
   static List<GetPage<dynamic>> routes = [
     GetPage(name: '/', page: () => HomePage()),
     GetPage(name: '/product', page: () {

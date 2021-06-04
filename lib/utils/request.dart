@@ -5,7 +5,9 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:app/config/ConfigData.dart';
 import 'package:app/utils/utils.dart';
-import 'package:flutter/material.dart';
+// import 'package:get/get_core/get_core.dart';
+// import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get.dart' as getX;
 
 part './request/request.dart';
 part './request/interceptors.dart';
