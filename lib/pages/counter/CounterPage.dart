@@ -14,6 +14,11 @@ class CounterPage extends StatelessWidget {
       body: Column(
         children: [
           Obx(() => Text("Clicks: ${c.count}")),
+          Center(
+            child: TextButton(
+              onPressed: changeTheme, 
+              child: Text('点击切换主题'))
+          )
         ],
       ),
       floatingActionButton: FloatingActionButton(
@@ -21,5 +26,9 @@ class CounterPage extends StatelessWidget {
         onPressed: c.increment,
       )
     );
+  }
+
+  void changeTheme() {
+    Get.changeTheme(Get.isDarkMode ? ThemeData.light(): ThemeData.dark());
   }
 }

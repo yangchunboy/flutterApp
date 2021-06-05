@@ -18,20 +18,9 @@ class App extends StatelessWidget {
         GetMaterialApp(
           initialRoute: '/',
           getPages: MyRouter.routes,
-          darkTheme: ThemeStyle.dark(),
           navigatorKey: Utils.navigatorKey,
         )
     );
-  }
-
-  // 根据状态切换主题
-  ThemeData switchTheme(theme) {
-    ThemeData themeData = ThemeStyle.light();
-    switch(theme.theme) {
-      case 1: themeData = ThemeStyle.light();break;
-      default: themeData = ThemeStyle.dark();
-    }
-    return themeData;
   }
 
 }
