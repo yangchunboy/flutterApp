@@ -1,3 +1,4 @@
+import 'package:app/pages/notFund/NotFundPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -17,8 +18,10 @@ class App extends StatelessWidget {
       builder: () => 
         GetMaterialApp(
           initialRoute: '/',
+          unknownRoute: GetPage(name: '/notFund', page: () => NotFundPage()),
           getPages: MyRouter.routes,
           navigatorKey: Utils.navigatorKey,
+          theme: ThemeStyle.light(),
         )
     );
   }

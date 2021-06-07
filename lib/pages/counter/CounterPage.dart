@@ -1,6 +1,7 @@
 import 'package:app/getx/counter/counter.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:app/theme/ThemeStyle.dart';
 
 class CounterPage extends StatelessWidget {
   @override
@@ -29,6 +30,6 @@ class CounterPage extends StatelessWidget {
   }
 
   void changeTheme() {
-    Get.changeTheme(Get.isDarkMode ? ThemeData.light(): ThemeData.dark());
+    Get.changeTheme(Get.isDarkMode ? ThemeStyle.light(): ThemeStyle.dark());
   }
 }

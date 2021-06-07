@@ -37,13 +37,13 @@ class _HomePageState extends State<HomePage>{
             },
             child: Text('点击我跳转商品页面并携带参数'),
           ),
-          TextButton(
-            onPressed: () {
-              // Navigator.pushNamed(context, '/detail');
-              Get.toNamed('/detail');
-            },
-            child: Text('点击我提起去请求数据和展示的demo页面'),
-          ),
+          // TextButton(
+          //   onPressed: () {
+          //     // Navigator.pushNamed(context, '/detail');
+          //     Get.toNamed('/detail');
+          //   },
+          //   child: Text('点击我提起去请求数据和展示的demo页面'),
+          // ),
           TextButton(
             onPressed: () {
               // Navigator.pushNamed(context, '/tools');
@@ -57,6 +57,13 @@ class _HomePageState extends State<HomePage>{
               Get.toNamed('/getx');
             },
             child: Text('点击跳转getX的例子'),
+          ),
+          TextButton(
+            onPressed: () {
+              // Navigator.pushNamed(context, '/getx');
+              Get.toNamed('/notFund');
+            },
+            child: Text('404页面'),
           ),
         ],
       )

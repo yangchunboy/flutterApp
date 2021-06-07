@@ -1,11 +1,11 @@
+import 'package:get/get.dart';
 import 'package:app/pages/tools/toolsPage.dart';
-import 'package:flutter/material.dart';
 import 'package:app/pages/home/HomePage.dart';
 import 'package:app/pages/product/ProductPage.dart';
 import 'package:app/pages/detail/DetailPage.dart';
 import 'package:app/pages/login/loginPage.dart';
 import 'package:app/pages/counter/CounterPage.dart';
-import 'package:get/get.dart';
+import 'package:app/pages/notFund/NotFundPage.dart';
 
 
 class MyRouter {
@@ -20,7 +20,7 @@ class MyRouter {
     GetPage(name: '/detail', page: () => DetailPage(params: {})),
     GetPage(name: '/tools', page: () => ToolsPage(params: {})),
     GetPage(name: '/login', page: () => LoginPage(params: {})),
-    GetPage(name: '/getx', page: () => CounterPage()),
+    GetPage(name: '/getx', page: () => CounterPage())
   ];
 
 }
